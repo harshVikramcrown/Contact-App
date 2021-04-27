@@ -19,13 +19,15 @@ const Input =({error,onChangeText,iconPosition,style,value,label,icon,...props})
    };
 
    const getBorderColor=()=>{
-if(focused){
+    if(error){
+        return colors.danger;
+    }
+
+    if(focused){
     return colors.primary;
 }
 
-       if(error){
-           return colors.danger;
-       }
+      
        else{
            return colors.grey;
        }
